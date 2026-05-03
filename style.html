@@ -149,26 +149,26 @@
     </script>
     <script>
     function sendToWhatsApp() {
-        // දත්ත ලබා ගැනී
+        // getting data
         let name = document.getElementById('name').value;
         let email = document.getElementById('email').value;
         let message = document.getElementById('message').value;
 
-        // පණිවිඩය හිස් දැයි පරීක්ෂා කිරීම (Optional)
+        // checking if fields are empty
         if(name == "" || email == "" || message == "") {
-            alert("කරුණාකර සියලු විස්තර ඇතුළත් කරන්න.");
+            alert("Please enter all details.");
             return;
         }
 
         let phoneNumber = "+94755634978"; 
 
-        // URL එක සකස් කිරීම
+        // make URL
         let url = "https://wa.me/" + phoneNumber + "?text=" 
             + "*Name:* " + encodeURIComponent(name) + "%0a" 
             + "*Email:* " + encodeURIComponent(email) + "%0a" 
             + "*Message:* " + encodeURIComponent(message);
 
-        // අලුත් window එකක විවෘත කිරීම
+        // Open new window.
         window.open(url, '_blank').focus();
     }
     </script>
