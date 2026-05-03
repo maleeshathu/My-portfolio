@@ -272,13 +272,13 @@ body{
 .projects .listbox .box {
     background-color: rgb(36, 34, 34);
     border-radius: 8px;
-    position: relative; /* මේක අනිවාර්යයි */
-    height: 300px0px;       /* ඔබට අවශ්‍ය උස මෙතැනින් වෙනස් කරන්න */
+    position: relative; 
+    height: 300px0px;       
     width: 400px;
-    overflow: hidden;    /* අමතර කොටස් පෙට්ටියෙන් එලියට පෙනීම වළක්වයි */
+    overflow: hidden;    
 }
 
-/* Background Image එක මුළු පෙට්ටිය පුරාම පෙනීමට */
+
 .projects .listbox .box img {
     width: 100%;
     height: 100%;
@@ -287,7 +287,7 @@ body{
     background-color: #242222;
 }
 
-/* රතු පාට Glass Overlay එක (මුලින් පහලට හංගල තියෙන්නේ) */
+
 .projects .listbox .box-content {
     position: absolute;
     bottom: 0;
@@ -304,26 +304,26 @@ body{
     color: white;
     text-align: center;
 
-    /* පහළ සිට ඉහළට එන animation එක */
+   
     transform: translateY(100%); 
     transition: transform 0.6s ease-in-out;
 }
 
-/* මවුස් එක ගෙනියද්දී (Hover) Overlay එක ඉහළට ඒම */
+
 .projects .listbox .box:hover .box-content {
     transform: translateY(0);
 }
 
-/* අයිකන් සහ අකුරු වල size සකස් කිරීම */
+
 .projects .listbox .box-content i {
     font-size: 30px;
-    transition: transform 0.3s ease; /* ලොකු වෙන එක සුමටව වෙන්න මෙය අනිවාර්යයි */
-    display: inline-block; /* transform එක හරියට වැඩ කරන්න මෙය අවශ්‍යයි */
+    transition: transform 0.3s ease; 
+    display: inline-block; 
     cursor: pointer;
 }
 .projects .listbox .box-content i:hover{
-    transform: scale(1.3); /* මෙයින් අයිකන් එක 1.3 ගුණයක් ලොකු වේ */
-    color: #0a0a0a;        /* (අවශ්‍ය නම්) ලොකු වෙද්දී පාට වෙනස් කරන්නත් පුළුවන් */
+    transform: scale(1.3); 
+    color: #0a0a0a;      
 }
 
 .projects .listbox .box-content h4 {
