@@ -1,0 +1,486 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+    
+}
+:root{
+    --background-color: black;
+    --text-color: white;
+    --button-color: red;
+    --shadow: 0px 10px 40px rgba(255, 0, 0, 0.4);
+}
+body{
+    background-color: var(--background-color);
+}
+
+
+
+/*--------------navbar-------------*/
+
+.navbar{
+    min-height: 10px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+.navbar img{
+    height: 100px;
+    margin: 0 0 0 20px; 
+}
+.navbar .list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    padding: 0 100px;   
+}
+.navbar .list li a{
+    color: var(--text-color);
+    font-size: 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+.navbar .list li a::after{
+    content: '';
+    background-color: red;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+.navbar .list li a:hover::after{
+    width: 100%;
+    transition: 0.6s;
+}
+
+@media(max-width:768px){
+    .navbar .list{
+        gap: 35px;
+        padding: 0 20px; 
+    }
+    .navbar img{
+    height: 80px;
+    margin: 0 0 0 20px; 
+}   
+}
+@media(max-width:600px){
+    .navbar .list{
+        gap: 25px;
+        padding: 0 20px; 
+    }
+    .navbar img{
+    height: 70px;
+    margin: 0 0 0 20px; 
+}   
+.navbar .list li a{
+    font-size: 15px;
+    }
+}
+
+
+/*------------home-------------*/
+
+.home1{
+    top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+}
+.home1 .text{
+    color: var(--text-color);
+}
+.home1 img{
+    width: 600px;
+    height: 800px;
+}
+.home1 .text h1{
+    font-size: 70px;
+}
+.home1 .text span{
+    color: var(--button-color);
+}
+.home1 .text h3{
+    font-size: 35px;
+}
+@media(max-width:1024px){
+    .home1{
+        padding: 35px;
+    }
+    .home1 img{
+    width: 400px;
+    height: 500px;
+    }
+    .home1 .text h1{
+    font-size: 60px;
+    }
+    .home1 .text h3{
+    font-size: 30px;
+    }
+}
+@media(max-width:768px){
+    .home1{
+        padding: 25px;
+    }
+    .home1 img{
+    width: 300px;
+    height: 400px;
+    }
+    .home1 .text h1{
+    font-size: 50px;
+    }
+    .home1 .text h3{
+    font-size: 25px;
+    }
+}
+@media(max-width:600px){
+    .home1{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .home1 img{
+        margin-bottom: 20px;
+    }
+    .home1 .text h1{
+    font-size: 40px;
+    }
+    .home1 .text h3{
+    font-size: 20px;
+    }
+}
+
+
+/*-------------------about---------------*/
+
+.about{
+    top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    gap: 50px;
+    
+}
+.about .text{
+    color: white;
+    width: 50%;
+    min-width: 300px;
+}
+.about .text h1{
+    font-size: 60px;
+    margin: 0 0 30px 0;
+}
+.about .text span{
+    color: var(--button-color);
+}
+.about .text p{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.about img{
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    width: 45%;
+    min-width: 300px;
+}
+.about .tab-buttons button{
+    background-color:var(--button-color);
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.about .tab-buttons button:hover{
+    background-color: var(--text-color);
+    color: black;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.about .tab-content h3{
+    color: var(--button-color);
+    margin-bottom: 5px;
+}
+.about .tab-content{
+    display: none;
+}
+.about .tab-content.active{
+    display: block;
+}
+@media(max-width:768px){
+    .about .text h1{
+        display: flex;
+        margin: 0 0 020px -150px;
+    }
+    .about .text p{
+        font-size: 15px;
+    }
+}
+@media(max-width:600px){
+    .about{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .about .text{
+    color: white;
+    width: 100%;
+    min-width: 300px;
+    }
+    .about .text h1{
+        display: flex;
+    font-size: 50px;
+    margin: 0 0 50px 25%;
+}  
+}
+
+
+
+/*------------------------project----------------*/
+
+.projects{
+    padding: 80px;
+    text-align: center;
+    
+}
+.projects .text{
+    color: var(--text-color);
+    font-size: 30px;
+}
+.projects span{
+    color: red;
+}
+.projects .listbox{
+    color: var(--text-color);
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+/* --- Project Box Style --- */
+.projects .listbox .box {
+    background-color: rgb(36, 34, 34);
+    border-radius: 8px;
+    position: relative; /* මේක අනිවාර්යයි */
+    height: 300px0px;       /* ඔබට අවශ්‍ය උස මෙතැනින් වෙනස් කරන්න */
+    width: 400px;
+    overflow: hidden;    /* අමතර කොටස් පෙට්ටියෙන් එලියට පෙනීම වළක්වයි */
+}
+
+/* Background Image එක මුළු පෙට්ටිය පුරාම පෙනීමට */
+.projects .listbox .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background-color: #242222;
+}
+
+/* රතු පාට Glass Overlay එක (මුලින් පහලට හංගල තියෙන්නේ) */
+.projects .listbox .box-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(255, 0, 0, 0.9));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+
+    /* පහළ සිට ඉහළට එන animation එක */
+    transform: translateY(100%); 
+    transition: transform 0.6s ease-in-out;
+}
+
+/* මවුස් එක ගෙනියද්දී (Hover) Overlay එක ඉහළට ඒම */
+.projects .listbox .box:hover .box-content {
+    transform: translateY(0);
+}
+
+/* අයිකන් සහ අකුරු වල size සකස් කිරීම */
+.projects .listbox .box-content i {
+    font-size: 30px;
+    transition: transform 0.3s ease; /* ලොකු වෙන එක සුමටව වෙන්න මෙය අනිවාර්යයි */
+    display: inline-block; /* transform එක හරියට වැඩ කරන්න මෙය අවශ්‍යයි */
+    cursor: pointer;
+}
+.projects .listbox .box-content i:hover{
+    transform: scale(1.3); /* මෙයින් අයිකන් එක 1.3 ගුණයක් ලොකු වේ */
+    color: #0a0a0a;        /* (අවශ්‍ය නම්) ලොකු වෙද්දී පාට වෙනස් කරන්නත් පුළුවන් */
+}
+
+.projects .listbox .box-content h4 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.projects .listbox .box-content p {
+    font-size: 13px;
+    line-height: 1.3;
+    margin-bottom: 5px;
+}
+
+.projects .listbox .box-content a {
+    margin-top: 15px;
+    color: white;
+    font-size: 25px;
+}
+.mycontacts{
+    color: white;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin: 100px 0 0 0 ;
+ gap: 20px;
+}
+.mycontacts .left{
+    height: 100%;
+    width: 50%;
+    display: grid; 
+}
+.mycontacts .left .text{
+    text-align: left;
+    margin-bottom: 20px;
+}
+.mycontacts .left .text h1{
+    color: red;
+}
+.mycontacts .left .text span{
+    color: white;
+}
+.mycontacts .left p{
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-transform: lowercase;
+    margin: 10px;
+    font-size: 20px;
+}
+.mycontacts .left i{
+    color: var(--button-color);
+}
+.mycontacts .left .icon{
+    display: flex;
+    text-align: left;
+    gap: 30px;
+    padding: 0 20px;
+    font-size: 30px;
+    margin-top: 20px;
+}
+.mycontacts .left .btn-btn{
+    color: whitesmoke;
+    font-size: 18px;
+    border: 1px solid red;
+    border-radius: 8px;
+    margin: 10px 250px;
+    padding: 10px;
+    transition: 0.5s;
+}
+.mycontacts .left .btn-btn:hover{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(255, 0, 0, 0.9)); 
+}
+.mycontacts .right{
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+.mycontacts .right input, textarea{
+    display: flex;
+    color: white;
+    width: 600px;
+    height: 45px;
+    font-size: 20px;
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--background-color);
+    border: 1px solid red;
+    border-radius: 5px;
+}
+.mycontacts .right textarea{
+    height: 100%;
+    font-size: 20px;
+    color: white;
+}
+.mycontacts .right .btn{
+    margin: 10px 280px;
+    padding: 5px 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.mycontacts .right .btn:hover{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(255, 0, 0, 0.9)); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.reveal {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+}
+
+/* JavaScript එකෙන් 'show-now' class එක එකතු කළාම විතරක් animation එක වැඩ කරනවා */
+.reveal.show-now {
+    animation: revealText 0.1s forwards 0.8s;
+}
+
+.reveal::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: var(--button-color, red); 
+}
+
+.reveal.show-now::after {
+    animation: revealBlock 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes revealBlock {
+    0% { width: 0; left: 0; }
+    50% { width: 100%; left: 0; }
+    100% { width: 0; left: 100%; }
+}
+
+@keyframes revealText {
+    to { color: white; }
+}

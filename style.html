@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maleesha</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!---------navbar--------------->
+    <div class="navbar" id="navbar">
+        <img src="img/logo.png.png" alt="" class="logo">
+        <ul class="list" id="list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#concate">Concate</a></li>
+        </ul>
+    </div>
+
+    <!----------home-------------->
+    <section class="home" id="home">
+        <div class="home1">
+            <div class="text">
+                <h1 class="reveal">Hi,<br> I'm <span class="reveal-box">Maleesha</span><br> Thushan.</h1><br>
+                <h3 class="reveal">Frontend Developer & Tech Enthusicist.</h3>
+            </div>
+            <img src="img/home.jpg.jpg" alt="" class="home-photo">
+        </div>
+    </section>
+
+
+    <!--------------------about--------------------->
+    <section class="about" id="about">
+            <img src="img/about.jpg" alt="">
+            <div class="text">
+                <h1 class="reveal"><span>About</span> me</h1>
+                <p class="reveal">I am a hardworking student currently studying for my HND in Software Engineering at ESOFT Metro Campus. My goal is to complete a degree in the future to become a skilled developer. I have basic knowledge of HTML, CSS, and JavaScript. I also have experience in office work and site supervision, which helped me build good communication and teamwork skills. I am looking for a job opportunity where I can use my skills, and I would be very happy if I could join your team in the future and contribute my best work.</p>
+
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="openTab(event, 'skill')">Skill</button>
+                    <button class="tab-btn" onclick="openTab(event, 'experience')">experience</button>
+                    <button class="tab-btn" onclick="openTab(event, 'education')">Education</button>
+                </div>
+
+                <div class="tab-content skill active" id="skill">
+                    <h3>Web Development</h3>
+                    <p>Designing Web interface</p>
+                </div>
+                <div class="tab-content experience" id="experience">
+                    <h3>2024 - current</h3>
+                    <p>Administrative Assistant at Timeplan (pvt) Ltd</p>
+                </div>
+                <div class="tab-content" education id="education">
+                    <h3>2023 - current</h3>
+                    <p>Software engineering at ESOFT University</p>
+                </div> 
+
+    </section>
+
+
+    <!------------------projects------------------------>
+    <section class="projects" id="projects">
+        <div class="text">
+            <h1 class="reveal">My <span>Projects</span></h1>
+        </div>
+        <div class="listbox">
+            <div class="box">
+                <img src="img/coffee.jpg.png" alt="Coffee Shop">
+                <div class="box-content">
+                    <i class="fa-solid fa-code"></i>
+                    <h4>Coffee Shop</h4>
+                    <p>This is my first web project, a Coffee Shop website. I built the front-end using HTML and CSS for the design and layout. I also used JavaScript with some AI assistance to add interactive features since I am still learning it.More...</p>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="" alt="">
+                <div class="box-content">
+                    <i class="fa-solid fa-code"></i>
+                    <h4>Coffee Shop</h4>
+                    <p>Hic ullam consequatur possimus debitis ipsam vero? A facere optio praesentium tempore expedita nemo placeat temporibus assumenda.</p>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+             <div class="box">
+                <img src="" alt="">
+                <div class="box-content">
+                    <i class="fa-solid fa-code"></i>
+                    <h4>Coffee Shop</h4>
+                    <p>Hic ullam consequatur possimus debitis ipsam vero? A facere optio praesentium tempore expedita nemo placeat temporibus assumenda.</p>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+
+    <!------------------------------contact------------------------------->
+    <section class="contact" id="concate">
+        <div class="mycontacts">
+            <div class="left">
+                <div class="text">
+                    <h1>Contact <span>Me</span></h1>
+                </div>
+                <p><i class="fa-solid fa-paper-plane"></i>  maleeshathusgan@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>  0755634978</p>
+                <div class="icon">
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <a href="" download class="btn-btn">Download CV</a>
+            </div>
+            <div class="right">
+                <div class="myform">
+                    <input type="text" id="name" placeholder="your Name" class="you">
+                    <input type="text" id="email" placeholder="Your Email" class you>
+                    <textarea name="text-area" id="message">Your Message</textarea>
+                </div>
+                <button class="btn" onclick="sendToWhatsApp()">Submit</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    </section>
+
+
+    
+    <script>
+        function openTab(event, tabID){
+            let contents = document.getElementsByClassName("tab-content");
+            for (let content of contents) {
+                content.classList.remove("active");
+            }
+
+            let buttons = document.getElementsByClassName("tab-buttons");
+            for (let btn of buttons) {
+                btn.classList.remove("active");
+            }
+
+            document.getElementById(tabID).classList.add("active");
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+    <script>
+    function sendToWhatsApp() {
+        // දත්ත ලබා ගැනීම
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let message = document.getElementById('message').value;
+
+        // පණිවිඩය හිස් දැයි පරීක්ෂා කිරීම (Optional)
+        if(name == "" || email == "" || message == "") {
+            alert("කරුණාකර සියලු විස්තර ඇතුළත් කරන්න.");
+            return;
+        }
+
+        let phoneNumber = "+94755634978"; 
+
+        // URL එක සකස් කිරීම
+        let url = "https://wa.me/" + phoneNumber + "?text=" 
+            + "*Name:* " + encodeURIComponent(name) + "%0a" 
+            + "*Email:* " + encodeURIComponent(email) + "%0a" 
+            + "*Message:* " + encodeURIComponent(message);
+
+        // අලුත් window එකක විවෘත කිරීම
+        window.open(url, '_blank').focus();
+    }
+    </script>
+
+
+
+
+
+        <script>
+        // css with js
+        const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show-now');
+        }
+    });
+}, {
+    threshold: 0.5 
+});
+
+document.querySelectorAll('.reveal').forEach((el) => observer.observe(el)); 
+    </script>
+
+</body>
+</html>
